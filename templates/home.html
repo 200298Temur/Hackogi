@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock title %}
+{% block content %}
+        <h1>This is HACKOGI</h1>
+<p>
+        <h2>Start Hackatons</h2>
+    {%for event in active_hackathons%}
+        <h3>
+            {{event.title}}
+        </h3>
+        <p>
+            {{event.owerview}}
+        </p>
+    {%endfor%}
+</p>
+<p>
+    <h2>Upcoming Hackatons</h2>
+    {%for event in upcoming_hockatons%}
+        <h3>
+            {{event.title}}
+        </h3>
+        <p>
+            {{event.owerview}}
+        </p>
+    {%endfor%}
+</p>
+<p>
+    <h2>Past Hackatons</h2>
+    {%for event in past_hackatons%}
+        <h3>
+            {{event.title}}
+        </h3>
+        <p>
+            {{event.owerview}}
+        </p>
+    {%endfor%}
+</p>
+{% endblock content %}
